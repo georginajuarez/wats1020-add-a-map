@@ -19,3 +19,17 @@
 // interesting locations. (You'll need to figure out the latitude/longitude for
 // these locations using a mapping tool such as Google Maps.)
 
+//STILL FIGURING OUT LEAFLET AND WORKING ON GETTING MAP SET UP
+
+
+//Mt. Rainer map
+var mymap = L.map('map-container').setView([46.876217, -121.728493], 13);
+
+
+//
+L.tileLayer('https://api.tiles.mapbox.com/v4/{id}/{z}/{x}/{y}.png?access_token={accessToken}', {
+    attribution: 'Map data &copy; <a href="http://openstreetmap.org">OpenStreetMap</a> contributors, <a href="http://creativecommons.org/licenses/by-sa/2.0/">CC-BY-SA</a>, Imagery © <a href="http://mapbox.com">Mapbox</a>',
+    maxZoom: 18,
+    id: 'mapbox://styles/mapbox/streets-v10',
+    accessToken: 'pk.eyJ1IjoiZ2VvcmdpbmFqIiwiYSI6ImNpeXRya3VwYTAwMWIzMm1teXkxOHRwNWIifQ.nk06wXItEzOgZNWLcMMCLQ'
+}).addTo(mymap);
